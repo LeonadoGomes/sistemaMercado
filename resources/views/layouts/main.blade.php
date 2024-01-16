@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body style="background-color: rgba(137, 43, 226, 0.637)">
     @yield('content')
 </body>
 
