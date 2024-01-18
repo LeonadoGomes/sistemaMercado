@@ -68,9 +68,16 @@
 }
 
 .block3 input {
+    box-sizing: border-box;
+    width: 100%;
     border: none;
     outline: none;
     padding: 5px;
+    margin-top: -7px;
+    font-size: 17.5px;
+    border-radius: 3px;
+    font-family: sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
 }
 
 
@@ -123,8 +130,6 @@
     text-transform: uppercase;
     border-radius: 8px;
 }
-
-
 
 .g-block-6 {
     width: 100%;
@@ -286,6 +291,20 @@
     border-radius: 8px;
 }
 
+.block10 input {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-top: -7px;
+    font-size: 17.5px;
+    border-radius: 3px;
+    font-family: sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
 .g-block-11 {
     width: 100%;
     float: left;
@@ -318,11 +337,11 @@
 
 .block12 {
     width: 21%;
-    height: 130px;
+    height: 134px;
     background-color: white;
     border-radius: 10px;
     margin-left: -1%;
-    margin-top: -0.0%;
+    margin-top: -0.6%;
 
 }
 
@@ -336,27 +355,46 @@
     font-size: 20px;
 }
 
-.g-block-13 {
-    width: 100%;
-    float: left;
+.nav-link {
+    margin-top: -17px;
+    align-items: center;
 }
 
-.block13 {
-    width: 43%;
-    height: 130px;
-    background-color: white;
-    border-radius: 10px;
-    margin-left: 43%;
-    margin-top: -25%;
-
+#valorUnitario {
+    font-size: 30px;
+    color: rgb(5, 5, 5);
+    text-align: center;
+    margin-top: -8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.block13 button {
-    border: none;
-    outline: none;
-    padding: 5px;
-    margin-left: 4px;
-    margin-top: 5px;
-    color: black;
-    font-size: 20px;
+#tabelaProdutos tbody {
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(5, 5, 5);
+}
+
+#codigo {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(5, 5, 5);
+
+    margin-top: -8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#quantidadeTotal {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(5, 5, 5);
+    margin-top: -8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#subtotal {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(5, 5, 5);
+    margin-top: -8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

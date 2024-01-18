@@ -1,0 +1,34 @@
+body {
+    background-color: white;
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 1200px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.container {
+    max-width: 100px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.form-container {
+    border: 3px solid #ccc;
+    padding: 20px;
+    margin: 47px;
+}
