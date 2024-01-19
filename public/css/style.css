@@ -293,17 +293,18 @@
 
 .block10 input {
     box-sizing: border-box;
-    width: 100%;
     border: none;
     outline: none;
-    padding: 5px;
+    width: 98%;
     margin-top: -7px;
-    font-size: 17.5px;
+    font-size: 24px;
     border-radius: 3px;
     font-family: sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
     text-align: center;
+    margin-left: 3px;
 }
+
 
 .g-block-11 {
     width: 100%;
@@ -374,7 +375,7 @@
     color: rgb(5, 5, 5);
 }
 
-#codigo {
+#codigos {
     text-align: center;
     font-size: 30px;
     color: rgb(5, 5, 5);
@@ -392,6 +393,14 @@
 }
 
 #subtotal {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(5, 5, 5);
+    margin-top: -8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#troco {
     text-align: center;
     font-size: 30px;
     color: rgb(5, 5, 5);

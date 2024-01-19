@@ -10,3 +10,4 @@ Route::get('/cadastro/cadastrarProdutos', [CadastrarProdutos::class, 'cadastro']
 Route::post('/cadastro', [CadastrarProdutos::class, 'cadastroprodutos']);
 Route::get('/lista-produtos',  [HomesCreen::class, 'mostrarListaProdutos']);
 Route::get('/buscar-produto/{codigoDeBarras}', [HomesCreen::class, 'buscarProdutoPorCodigoDeBarras']);
+Route::delete('/cadastroprodutos/{id}',  [CadastrarProdutos::class, 'deleteProdutos']);

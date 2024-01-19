@@ -2,6 +2,8 @@
 
 @section('title', 'Título da Página')
 
+@include('modal.modalProdutos')
+
 @section('content')
     <div class="container">
         <!-- Container 1 -->
@@ -50,7 +52,7 @@
         <div class="g-block-6">
             <div class="block6">
                 <h2>Código </h2>
-                <div id="codigo"></div>
+                <div id="codigos"></div>
             </div>
         </div>
     </div>
@@ -105,32 +107,29 @@
     <div class="container">
         <div class="g-block-10">
             <div class="block10">
-                <h2>Total recebido</h2>
-                <div id="totalrecebido"></div>
+                <h2>Valor recebido</h2>
+                <input type="text" id="valorRecebido">
             </div>
         </div>
-
     </div>
     <div class="container">
         <div class="g-block-11">
             <div class="block11">
                 <h2>Troco</h2>
+                <div id="troco"></div>
             </div>
         </div>
-
     </div>
 
     <div class="container">
         <div class="g-block-12">
             <div class="block12">
-                <a class=""> <button type="button" class="btn btn-outline-info">F3- Excluir Item</button></a>
+                <a class=""> <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                        data-target="#exampleModal" id="openModalButton">F3- Excluir Item</button></a>
                 <a class=""> <button type="button" class="btn btn-outline-info">F4- Inserir Quantidade</button></a>
-
                 <a class="nav-link" href="/cadastro/cadastrarProdutos">
                     <button type="button" class="btn btn-outline-info" id="f5">F5- Cadastrar </button>
                 </a>
-
-
             </div>
         </div>
     </div>

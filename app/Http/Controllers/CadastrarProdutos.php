@@ -29,4 +29,17 @@ class CadastrarProdutos extends Controller
 
         return redirect('/');
     }
+
+
+    public function listarProdutos()
+    {
+        return view('modal.modalProdutos');
+    }
+
+    public function deleteProdutos($id)
+    {
+        CadastroProduto::findOrFail($id)->delete();
+
+        return redirect('/');
+    }
 }

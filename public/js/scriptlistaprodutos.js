@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+    $('#valorRecebido').on('input', function () {
+        calcularTroco();
+    });
+
+
     $('#codigoDeBarras').on('input', function () {
         var codigoDeBarras = $(this).val();
 
@@ -20,6 +26,9 @@ $(document).ready(function () {
 
                 // Calcular o subtotal após todas as operações
                 calcularSubtotal();
+
+                // Calcular o troco
+                calcularTroco();
             },
             error: function (xhr, status, error) {
                 console.log('Erro ao buscar produto:', error);
@@ -49,6 +58,21 @@ $(document).ready(function () {
             $('#tabelaProdutos tbody').append(novaLinha);
         }
 
+
+        // Adicionar ou atualizar na tabela da modal
+        var linhaExistenteModal = $('#modalProdutos tr[data-id="' + cadastroprodutos.id + '"]');
+        if (linhaExistenteModal.length > 0) {
+            // Se a linha já existe, atualizar a quantidade e total na tabela da modal
+            var quantidadeAtualModal = parseInt(linhaExistenteModal.find('.qtd').text()) + 1;
+            linhaExistenteModal.find('.qtd').text(quantidadeAtualModal);
+
+        } else {
+            // Se a linha não existe, adicionar uma nova na tabela da modal
+            var novaLinhaModal = '<tr data-id="' + cadastroprodutos.id + '"><td>' + cadastroprodutos.id + '</td><td>' + cadastroprodutos.nome + '</td><td>' + cadastroprodutos.codigo + '</td><td> <button type="button" class="btn btn btn-danger">Excluir</button></td></tr>';
+
+            $('#modalProdutos').append(novaLinhaModal);
+        }
+
         // Atualizar outras partes da interface se necessário
         atualizarValorUnitario(cadastroprodutos.preco);
         atualizarCodigo(cadastroprodutos.codigo);
@@ -56,8 +80,6 @@ $(document).ready(function () {
 
         // Calcular o subtotal após todas as operações
         calcularSubtotal();
-
-
 
     }
 
@@ -68,7 +90,7 @@ $(document).ready(function () {
 
     // Função para atualizar o código na interface do usuário
     function atualizarCodigo(codigo) {
-        $('#codigo').text(codigo);
+        $('#codigos').text(codigo);
     }
 
     // Função para atualizar a quantidade total de itens na interface do usuário
@@ -87,7 +109,7 @@ $(document).ready(function () {
 
     function calcularSubtotal() {
         var subtotal = 0;
-        // Iterar sobre as linhas da tabela e somar os valores totais
+
         // Iterar sobre as linhas da tabela e somar os valores totais
         $('#tabelaProdutos tbody tr').each(function () {
             var valorTotalLinha = parseFloat($(this).find('.total').text().replace('R$ ', '')) || 0;
@@ -96,5 +118,17 @@ $(document).ready(function () {
 
         // Atualizar o elemento #subtotal com o valor calculado
         $('#subtotal').text('R$ ' + subtotal.toFixed(2));
+    }
+
+    function calcularTroco() {
+        // Obter o valor total da compra do subtotal
+        var subtotal = parseFloat($('#subtotal').text().replace('R$ ', '')) || 0;
+
+        var valorRecebido = parseFloat($('#valorRecebido').val()) || 0;
+
+        // Certifique-se de que o troco não seja negativo antes de começar a digitar
+        var troco = Math.max(valorRecebido - subtotal, 0);
+
+        $('#troco').text('R$ ' + troco.toFixed(2));
     }
 });

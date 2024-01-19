@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,6 +21,7 @@
     <!--Chamando JS-->
     <script src="/js/scriptbotao.js"></script>
     <script src="/js/scriptlistaprodutos.js"></script>
+    <script src="/js/scriptmodal.js"></script>
 
     <!--Script de adicionar icons-->
     <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
